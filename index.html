@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2ede5" />
+    <title>LinkedIn Graphics Bot</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <h1>Build your BI-style graphic</h1>
+      </section>
+
+      <section class="workspace">
+        <aside class="controls panel">
+          <label class="field">
+            <span>Source photo</span>
+            <input id="photoInput" type="file" accept="image/*" />
+          </label>
+
+          <label class="field">
+            <span>Headline</span>
+            <input
+              id="headlineInput"
+              type="text"
+              placeholder="Enter the headline"
+              spellcheck="true"
+            />
+          </label>
+
+          <label class="field">
+            <span>Headline size</span>
+            <input id="headlineSizeInput" type="range" min="15" max="24" step="0.1" />
+          </label>
+
+          <div class="field">
+            <span>Headline position</span>
+            <div class="segmented" role="radiogroup" aria-label="Headline position">
+              <label>
+                <input type="radio" name="headlinePosition" value="bottom" checked />
+                <span>Bottom</span>
+              </label>
+              <label>
+                <input type="radio" name="headlinePosition" value="top" />
+                <span>Top</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="toggle">
+            <span>Add black banner</span>
+            <input id="topBarToggle" type="checkbox" />
+          </label>
+
+          <label class="field">
+            <span>Bottom fade</span>
+            <input id="fadePositionInput" type="range" min="0" max="1" step="0.01" />
+          </label>
+
+          <div class="grid-two">
+            <label class="field">
+              <span>Image zoom</span>
+              <input id="imageZoomInput" type="range" min="1" max="2.2" step="0.01" />
+            </label>
+            <div class="field">
+              <span>Image position</span>
+              <button id="recenterButton" type="button" class="secondary">Recenter</button>
+            </div>
+          </div>
+          <p class="control-hint">Drag the preview image to move it around.</p>
+
+          <div class="grid-two color-pickers">
+            <div class="field">
+              <span>BI logo color</span>
+              <div class="segmented" role="radiogroup" aria-label="BI logo color">
+                <label>
+                  <input type="radio" name="logoColor" value="white" checked />
+                  <span>White</span>
+                </label>
+                <label>
+                  <input type="radio" name="logoColor" value="black" />
+                  <span>Black</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <span>Headline color</span>
+              <div class="segmented" role="radiogroup" aria-label="Headline color">
+                <label>
+                  <input type="radio" name="headlineColor" value="white" checked />
+                  <span>White</span>
+                </label>
+                <label>
+                  <input type="radio" name="headlineColor" value="black" />
+                  <span>Black</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="exportButton" type="button">Export PNG</button>
+            <button id="resetButton" type="button" class="secondary">Clear content</button>
+          </div>
+        </aside>
+
+        <section class="preview panel">
+          <div class="canvas-frame">
+            <div class="drop-hint" aria-hidden="true">
+              Drop a photo here
+            </div>
+            <canvas id="canvas" width="1200" height="1500"></canvas>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
