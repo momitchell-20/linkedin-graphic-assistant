@@ -1,0 +1,64 @@
+{
+  "paragraphs": {
+    "hook": {
+      "required": true,
+      "source": "full_story_text",
+      "rule": "Use story language verbatim."
+    },
+    "body": {
+      "min": 2,
+      "max": 4,
+      "source": "full_story_text",
+      "rule": "Preserve story order, include enough context to orient the reader, and do not add paraphrased context."
+    },
+    "cta": {
+      "required": true,
+      "template": "Read more about {{cta_teaser}} at Business Insider: {{article_url}}",
+      "rule": "Choose cta_teaser as a specific, grounded word or short phrase based only on story text that captures the main topic or point of the story. It may combine exact names/entities from the article with a simple framing phrase such as 'choice to leave' when directly supported by the story. Good examples include 'recent shifts inside Amazon' and 'Amazon's AI strategy overhaul'. Do not use attribution, source-label fragments, or vague leftover details such as 'said in a post on X' or 'the past year'."
+    },
+    "credit": {
+      "required": true,
+      "template": "(Credit: )"
+    },
+    "hashtags": {
+      "required": true,
+      "template": "{{hashtags}}"
+    }
+  },
+  "caption_tracks": [
+    {
+      "id": "hook_first",
+      "description": "Start with the strongest lead sentence from the story, then continue into the main arc."
+    },
+    {
+      "id": "narrative_first",
+      "description": "Start with enough setup to establish the person, timing, and setting, then move into the turning point and consequence."
+    },
+    {
+      "id": "quote_first",
+      "description": "Lead with a direct quote that is compelling on its own and pivotal to the central story, then add verbatim context from the rest of the story."
+    }
+  ],
+  "rewrite_rules": [
+    {
+      "name": "light_readability_spacing",
+      "rule": "Insert paragraph breaks and spacing to match the caption format without changing the point of view."
+    },
+    {
+      "name": "quoted_text_verbatim",
+      "rule": "Leave any text inside quotation marks exactly as written, including pronouns and punctuation. Any quote used in a caption must include source attribution naming or identifying who said or wrote it."
+    }
+  ],
+  "prohibited": [
+    "new facts",
+    "new claims",
+    "creative rewrites",
+    "headline-only paraphrase",
+    "summarized or paraphrased context",
+    "first-person to third-person conversion",
+    "marketing language not present in the story",
+    "boilerplate disclaimers such as as-told-to intros and length-and-clarity notes",
+    "reporter callouts and contact lines",
+    "changes to quoted text"
+  ]
+}
