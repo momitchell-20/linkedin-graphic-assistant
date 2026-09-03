@@ -50,12 +50,14 @@ body {
 .hero {
   margin-bottom: 18px;
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
 }
 
 .hero h1 {
   margin: 0;
-  width: 100%;
-  max-width: 100%;
+  width: fit-content;
+  max-width: min(100%, 1000px);
   text-align: center;
   font-size: clamp(1.7rem, 3vw, 2.8rem);
   line-height: 0.95;
