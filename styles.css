@@ -42,16 +42,16 @@ body {
   margin: 0 auto;
   padding: 6px 0 8px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
   align-items: start;
-  row-gap: 4px;
+  row-gap: 20px;
+  column-gap: calc(8px + 2cm);
 }
 
 .hero {
-  margin: 0 0 2px;
+  margin: 0 0 6px;
   grid-column: 1 / -1;
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -62,7 +62,7 @@ body {
   max-width: none;
   text-align: center;
   white-space: nowrap;
-  font-size: clamp(1.1rem, 1.75vw, 2.35rem);
+  font-size: clamp(1.4rem, 2vw, 2.55rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
 }
@@ -807,12 +807,12 @@ button.secondary {
 
 .controls {
   grid-column: 1;
-  grid-row: 3 / span 2;
+  grid-row: 2;
 }
 
 .preview {
   grid-column: 2;
-  grid-row: 3 / span 2;
+  grid-row: 2;
   align-self: start;
 }
 
@@ -837,11 +837,12 @@ button.secondary {
 @media (max-width: 1024px) {
   .app {
     grid-template-columns: 1fr;
+    row-gap: 10px;
   }
 
   .hero {
-    display: grid;
-    align-items: start;
+    width: 100%;
+    margin-inline: 0;
   }
 
   .stories,
@@ -902,8 +903,8 @@ button.secondary {
   }
 
   .hero {
-    width: 100vw;
-    margin-inline: calc(50% - 50vw);
+    width: 100%;
+    margin-inline: 0;
   }
 
   .controls,
