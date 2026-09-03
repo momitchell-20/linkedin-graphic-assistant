@@ -1,4 +1,6 @@
-# LinkedIn Graphics Bot
+# LinkedIn Story Suggestions
+
+This is a full draft clone of the LinkedIn graphics app, kept separate so you can make major changes without losing the original version.
 
 Standalone local app for composing LinkedIn graphics in the Business Insider style.
 
