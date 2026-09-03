@@ -13,107 +13,6 @@
         <h1>Build your BI-style graphic</h1>
       </section>
 
-      <section class="stories panel">
-        <div class="stories-header">
-          <div>
-            <p class="eyebrow">Story pipeline</p>
-            <h2>Rolling list of stories to consider posting</h2>
-          </div>
-          <div class="stories-metrics">
-            <div class="metric">
-              <span id="storiesCount">0</span>
-              <label>stories shown</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="stories-toolbar">
-          <label class="field stories-search">
-            <span>Filter stories</span>
-            <input
-              id="storiesSearchInput"
-              type="text"
-              placeholder="Search headline, vertical, url, or date"
-              spellcheck="false"
-            />
-          </label>
-          <p class="stories-note" id="storiesUpdatedNote">Mock feed only for now.</p>
-          <button id="refreshStoriesButton" type="button" class="secondary stories-refresh-button">Refresh sheet</button>
-        </div>
-
-        <div class="stories-table-wrap">
-          <table class="stories-table" aria-label="Rolling story list">
-            <thead>
-              <tr>
-                <th class="col-date">Publish date</th>
-                <th class="col-vertical">Vertical</th>
-                <th class="col-headline">Headline</th>
-                <th class="col-url">URL</th>
-                <th class="col-subs">Subs</th>
-                <th class="col-action">Action</th>
-              </tr>
-            </thead>
-            <tbody id="storiesTbody"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="caption panel">
-        <div class="caption-header">
-          <div>
-            <p class="eyebrow">Caption builder</p>
-            <h2>Paste the full story text here</h2>
-            <p class="caption-description">
-              Paste the full story text into the builder, then generate a caption or edit the text manually.
-            </p>
-          </div>
-          <div class="caption-meta">
-            <span id="captionTrackLabel">Ready for pasted text</span>
-          </div>
-        </div>
-
-        <div class="caption-body">
-          <div class="caption-controls">
-            <div class="caption-group-label">Caption type</div>
-            <div class="caption-track-switch" role="group" aria-label="Caption tracks">
-              <button type="button" class="secondary caption-track-button is-active" data-caption-track="hook_first">Hook</button>
-              <button type="button" class="secondary caption-track-button" data-caption-track="narrative_first">Narrative</button>
-              <button type="button" class="secondary caption-track-button" data-caption-track="quote_first">Quote</button>
-            </div>
-            <div class="caption-group-label">Choose pronouns</div>
-            <div class="caption-pronoun-switch" role="group" aria-label="Caption pronouns">
-              <button type="button" class="secondary caption-track-button caption-pronoun-button" data-caption-pronoun="she_her">She / her</button>
-              <button type="button" class="secondary caption-track-button caption-pronoun-button" data-caption-pronoun="he_his">He / his</button>
-              <button type="button" class="secondary caption-track-button caption-pronoun-button is-active" data-caption-pronoun="they_their">They / their</button>
-            </div>
-            <div class="caption-action-buttons">
-              <button id="captionGenerateButton" type="button">Generate caption</button>
-              <button id="captionCopyButton" type="button" class="secondary">Copy caption</button>
-            </div>
-          </div>
-
-          <label class="field caption-field caption-credit-field">
-            <span>Photo credit</span>
-            <input id="captionPhotoCreditInput" type="text" spellcheck="false" placeholder="Enter the photo credit" />
-          </label>
-
-          <label class="field caption-field">
-            <span>Caption</span>
-            <textarea id="captionOutput" spellcheck="false" placeholder="Click Generate caption after pasting the full story text."></textarea>
-          </label>
-
-          <label class="field caption-field caption-prompt-field">
-            <span>Prompt preview</span>
-            <textarea id="captionPromptPreview" readonly spellcheck="false" placeholder="The prompt will show up here."></textarea>
-          </label>
-
-          <label class="field caption-field caption-story-field">
-            <span>Full story text</span>
-            <textarea id="captionPromptOutput" spellcheck="false" placeholder="Paste the full story text here"></textarea>
-          </label>
-        </div>
-      </section>
-
       <section class="workspace">
         <aside class="controls panel">
           <label class="field">
@@ -255,7 +154,6 @@
         </section>
       </section>
     </main>
-    <script src="./linkedin-caption-assistant/caption-assistant.js?v=20260728-quote-attribution"></script>
     <script src="./app.js?v=20260820-banner-sizing"></script>
   </body>
 </html>
